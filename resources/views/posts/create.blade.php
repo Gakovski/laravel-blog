@@ -16,7 +16,7 @@
     @enderror
 
     <label>Description</label>
-    <textarea class="@error('description') error-border @enderror" name="description"  value="{{ old('description') }}" ></textarea>
+    <textarea class="@error('description') error-border @enderror" name="description"  value="{{ old('description') }}"></textarea>
     @error('description')
     <div class="error">
         {{ $message }}
