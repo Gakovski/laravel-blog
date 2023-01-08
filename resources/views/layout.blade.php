@@ -20,7 +20,7 @@
 
         </ul>
 
-        @includeWhen($errors->any(), '_errors');
+        <!-- @includeWhen($errors->any(), '_errors') -->
 
         @if (session('success'))
         <div class="flash-success">

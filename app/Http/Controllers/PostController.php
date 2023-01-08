@@ -32,7 +32,7 @@ class PostController extends Controller
         
         return redirect()
             ->route('posts.create')
-            ->with('success', 'Post is subitted! Title: ' .
+            ->with('success', 'Post is submitted! Title: ' .
             $request->input('title') . ' Description: ' .
             $request->input('description'));
     }

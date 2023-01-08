@@ -2,17 +2,36 @@
 
 .main {
   margin-left: 20px;
+  margin-right: 20px;
+
 }
 
+@import url(https://fonts.googleapis.com/css?family=Lato:100,400);
+html {
+  height: 100%;
+  perspective: 1000px;
+  transform-style: preserver-3d;
+  font-family: lato, sans-serif;
+}
+
+body {
+  background-color: #bad7e9;
+  background: radial-gradient(closest-corner, #bad7e9 60%, rgba(186, 215, 233, 0.26));
+  background-repeat: no-repeat;
+}
 
 /* Navigation */
 
 ul.nav {
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   overflow: hidden;
-  background-color: rgb(48, 146, 149);
+  background-color: #343e48;
+  border-radius: 30px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB9JREFUeNpiZmBg6AZiDiBWZ4YyQMCOCcYA4kMAAQYAHyYCCUdxidgAAAAASUVORK5CYII=");
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 
 .nav li {
@@ -25,10 +44,30 @@ ul.nav {
 
 .nav li a {
   display: block;
+  padding: 16px 18px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 0px rgba(0, 0, 0, 0.4);
   color: white;
   text-align: center;
-  padding: 16px 18px;
+  letter-spacing: .2em;
   text-decoration: none;
+  transform-style: preserve-3d;
+}
+
+.nav li a:after {
+  display: block;
+  padding: 16px 18px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 0px rgba(0, 0, 0, 0.4);
+  color: white;
+  text-align: center;
+  letter-spacing: .2em;
+  text-decoration: none;
+  transform-style: preserve-3d;
 }
 
 .nav li p {
@@ -39,12 +78,11 @@ ul.nav {
 }
 
 .nav li a:hover:not(.active) {
-  background-color: rgb(253, 253, 253);
-  color: black;
+  background-color: #00415a;
 }
 
 .active {
-  background-color: #fa6908;
+  background-color: #0091ca;
 }
 
 
@@ -62,7 +100,7 @@ input[type=password] {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  border-radius: 4px;
+  border-radius: 30px;
   border: 2px solid #ccc;
 }
 
@@ -72,22 +110,22 @@ textarea {
   padding: 12px 20px;
   box-sizing: border-box;
   border: 2px solid #ccc;
-  border-radius: 4px;
+  border-radius: 30px;
   resize: none;
 }
 
 button {
-  background-color: #fa6908;
+  background-color: #0091ca;
   color: white;
   padding: 12px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 30px;
   cursor: pointer;
   margin: 18px 2px;
 }
 
 .delete {
-  background-color: #fa0808;
+  background-color: rgb(226, 70, 23);
 }
 
 
@@ -95,29 +133,31 @@ button {
 
 .flash-success {
   padding: 20px;
-  background-color: #33a43a;
+  background-color: #00caa8;
   color: white;
   margin: 20px 0px;
-  border-radius: 4px;
+  border-radius: 30px;
+  width: fit-content;
 }
 
 .flash-error {
   padding: 20px;
-  background-color: rgb(235, 47, 47);
+  background-color: rgb(226, 70, 23);
   color: white;
   margin: 20px 0px;
-  border-radius: 4px;
+  border-radius: 30px;
+  width: fit-content;
 }
 
 
 /* Error messages */
 
 .error {
-  color: red;
+  color: rgb(226, 70, 23);
 }
 
 .error-border {
-  border: 2px solid red !important;
+  border: 2px solid rgb(226, 70, 23) !important;
 }
 
 
