@@ -36,10 +36,8 @@ class PostController extends Controller
         $post->save();
         
         return redirect()
-            ->route('posts.create')
-            ->with('success', 'Post is submitted! Title: ' .
-            $post->title . ' Description: ' .
-            $post->description);
+            ->route('posts.show', [$post])
+            ->with('success', 'Post submitted!');
     }
 
     /**
@@ -48,9 +46,11 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Post $post)
     {
-        //
+        return view('posts.show', [
+            'post' => $post,
+        ]);
     }
 
     /**
@@ -59,9 +59,11 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Post $post)
     {
-        //
+        return view('posts.edit', [
+            'post' => $post,
+        ]);
     }
 
     /**
@@ -71,9 +73,20 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'description' => ['required', 'min:10']
+        ]);
+
+        $post->title = $request->input('title');
+        $post->description = $request->input('description');
+        $post->save();
+
+        return redirect()
+        ->route('posts.show', [$post])
+        ->with('success', 'Post is updated!');
     }
 
     /**
@@ -82,8 +95,12 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Post $post)
     {
-        //
+        $post->delete();
+
+        return redirect()
+        ->route('home')
+        ->with('success', 'Post is deleted!');
     }
 }

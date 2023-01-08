@@ -131,7 +131,21 @@ button {
 .delete {
   background-color: rgb(226, 70, 23);
 }
+.edit {
+  background-color: rgb(83, 206, 255);
+}
 
+.buttons {
+  width: 200px;
+  margin: 0 auto;
+  display: inline;
+}
+  
+.action_btn {
+  width: 200px;
+  margin: 0 auto;
+  display: inline;
+}
 
 /* Flash messages */
 
@@ -139,7 +153,7 @@ button {
   padding: 20px;
   background-color: #00caa8;
   color: white;
-  margin: 20px;
+  margin: 30px auto;
   border-radius: 30px;
   width: fit-content;
 }
@@ -148,7 +162,7 @@ button {
   padding: 20px;
   background-color: rgb(226, 70, 23);
   color: white;
-  margin: 20px 0px;
+  margin: 30px auto;
   border-radius: 30px;
   width: fit-content;
 }
