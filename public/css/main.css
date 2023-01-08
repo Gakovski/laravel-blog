@@ -135,16 +135,8 @@ button {
   background-color: rgb(83, 206, 255);
 }
 
-.buttons {
-  width: 200px;
-  margin: 0 auto;
-  display: inline;
-}
-  
-.action_btn {
-  width: 200px;
-  margin: 0 auto;
-  display: inline;
+.inline-flex-parent {
+  display: inline-flex;
 }
 
 /* Flash messages */
