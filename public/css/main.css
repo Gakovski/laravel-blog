@@ -3,7 +3,6 @@
 .main {
   margin-left: 20px;
   margin-right: 20px;
-
 }
 
 @import url(https://fonts.googleapis.com/css?family=Lato:100,400);
@@ -16,8 +15,6 @@ html {
 
 body {
   background-color: #bad7e9;
-  background: radial-gradient(closest-corner, #bad7e9 60%, rgba(186, 215, 233, 0.26));
-  background-repeat: no-repeat;
 }
 
 /* Navigation */
@@ -27,15 +24,15 @@ ul.nav {
   margin: 0 auto;
   padding: 0;
   overflow: hidden;
-  background-color: #343e48;
+  background-color: #bad7e9;
   border-radius: 30px;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB9JREFUeNpiZmBg6AZiDiBWZ4YyQMCOCcYA4kMAAQYAHyYCCUdxidgAAAAASUVORK5CYII=");
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
   position: relative;
+  
 }
 
 .nav li {
   float: left;
+  margin-left: 10px;
 }
 
 .nav li.username {
@@ -50,6 +47,8 @@ ul.nav {
   z-index: 2;
   text-shadow: 1px 0px rgba(0, 0, 0, 0.4);
   color: white;
+  background-color: #00415a;
+  border-radius: 30px;
   text-align: center;
   letter-spacing: .2em;
   text-decoration: none;
@@ -78,10 +77,11 @@ ul.nav {
 }
 
 .nav li a:hover:not(.active) {
-  background-color: #00415a;
+  background-color: #64a7c2;
+    border-radius: 30px;
 }
 
-.active {
+.nav li .active {
   background-color: #0091ca;
 }
 
@@ -116,14 +116,18 @@ textarea {
 
 button {
   background-color: #0091ca;
-  color: white;
-  padding: 12px 20px;
+  position: relative;
   border: none;
   border-radius: 30px;
+  color: #FFFFFF;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
   cursor: pointer;
   margin: 18px 2px;
+  font-size: large; 
 }
-
 .delete {
   background-color: rgb(226, 70, 23);
 }
@@ -135,7 +139,7 @@ button {
   padding: 20px;
   background-color: #00caa8;
   color: white;
-  margin: 20px 0px;
+  margin: 20px;
   border-radius: 30px;
   width: fit-content;
 }
