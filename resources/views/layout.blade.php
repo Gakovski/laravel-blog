@@ -7,13 +7,14 @@
         <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     </head>
 
-    <body>
+    <body onload="document.body.style.visibility=`visible`;">
+    <script>document.body.style.visibility=`hidden`;</script>
         <ul class="nav">
             <li><a class="{{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a></li>
             <li><a class="{{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">About</a></li>
             @auth
             <li><a class="{{ request()->routeIs('posts.create') ? 'active' : '' }}" href="{{ route('posts.create') }}">Create Post</a></li>
-            <li><a href="{{ route('logout') }}">Logout</a></li>
+            <li><a class="logout" href="{{ route('logout') }}">Logout</a></li>
             <li class="username"><p>Logged in as <b>{{ Auth::user()->name }}</b></p></li>
             @else
             <li><a class="{{ request()->routeIs('register') ? 'active' : ''}}" href="{{ route('register') }}">Register</a></li>

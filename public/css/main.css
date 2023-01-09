@@ -37,6 +37,8 @@ ul.nav {
 
 .nav li.username {
   float: right;
+  background-color: #00415a;
+  border-radius: 30px;
 }
 
 .nav li a {
@@ -83,6 +85,10 @@ ul.nav {
 
 .nav li .active {
   background-color: #0091ca;
+}
+
+.nav li .logout:hover:not(.active){
+  background-color: rgb(226, 70, 23);
 }
 
 
