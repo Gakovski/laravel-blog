@@ -139,6 +139,10 @@ button {
   display: inline-flex;
 }
 
+.grid-parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr
+}
 /* Flash messages */
 
 .flash-success {
