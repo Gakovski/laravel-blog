@@ -5,7 +5,7 @@
 @section('content')
 <h1>Create a New Blog Post</h1>
 
-<form method="POST" action="{{ route('posts.store') }}">
+<form method="POST" action="{{ route('posts.store') }}" enctype="multipart/form-data">
     @csrf
     <label>Title</label>
     <input class="@error('title') error-border @enderror" type="text" name="title" value="{{ old('title') }}">
@@ -23,6 +23,16 @@
     </div>
     @enderror
 
+    <label>Image:</label>
+    <input type="file" name="image" placeholder="image">
+    @error('image')
+    <div class="error">
+        {{ $message }}
+    </div>
+    @enderror
+
+
+    <br>
     <button type="submit">Submit</button>
 </form>
 

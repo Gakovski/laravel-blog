@@ -32,7 +32,7 @@
     </div>
   @enderror
 
-  <button type="submit">Register</button>
+  <button type="submit" class="glossy-button glossy-button--blue">Register</button>
 
   If you already have an account <a href="{{ route('login') }}">login</a>.
 </form>

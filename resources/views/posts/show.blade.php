@@ -7,10 +7,12 @@
     <div class="post-content">
         <h1>{{ $post->title }}</h1>
         <p>{{ $post->description }}</p>
+        <img src="/images/{{ $post->image }}" width="500px">
+        <br>
         <div class="inline-flex-parent">
             @can('update', $post)
             <div>
-                <button class="edit" type="submit"><a href="{{ route('posts.edit', [$post]) }}">Edit post</a></button>
+                <button class="glossy-button glossy-button--gold" type="submit"><a href="{{ route('posts.edit', [$post]) }}">Edit post</a></button>
             </div>
             @endcan
             @can('delete', $post)
@@ -18,7 +20,7 @@
                 <form method="POST" action="{{ route('posts.destroy', [$post]) }}">
                     @csrf
                     @method('DELETE')
-                    <button class="delete" type="submit">Delete post</button>
+                    <button class="glossy-button glossy-button--red" type="submit">Delete post</button>
                 </form>
             </div>
             @endcan

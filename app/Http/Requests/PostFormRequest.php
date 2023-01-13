@@ -25,7 +25,8 @@ class PostFormRequest extends FormRequest
     {
         return [
             'title' => 'required',
-            'description' => ['required', 'min:10']
+            'description' => ['required', 'min:10'],
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
     }
 }
