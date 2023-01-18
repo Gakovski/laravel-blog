@@ -3,16 +3,16 @@
 @section('title', $post->title)
 
 @section('content')
-<div class="post-item">
-    <div class="post-content">
+<div class="post-item glossy-button">
+    <div>
         <h1>{{ $post->title }}</h1>
         <p>{{ $post->description }}</p>
         <img src="/images/{{ $post->image }}" width="500px">
         <br>
-        <div class="inline-flex-parent">
+        <div class="edit-delete-inline">
             @can('update', $post)
             <div>
-                <a class="edit glossy-button glossy-button--gold" href="{{ route('posts.edit', [$post]) }}">Edit post</a>
+                <a class="glossy-button glossy-button--gold" href="{{ route('posts.edit', [$post]) }}">Edit post</a>
             </div>
             @endcan
             @can('delete', $post)

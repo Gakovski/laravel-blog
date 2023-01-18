@@ -13,22 +13,22 @@
             <li><a class="glossy-button glossy-button--blue {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a></li>
             <li><a class="glossy-button glossy-button--blue {{ request()->routeIs('all') ? 'active' : '' }}" href="{{ route('all') }}">All Posts</a></li>
             @auth
-            <li><a class="glossy-button glossy-button--blue {{ request()->routeIs('posts.create') ? 'active' : '' }}" href="{{ route('posts.create') }}">Create Post</a></li>
+            <li ><a class="glossy-button glossy-button--blue {{ request()->routeIs('posts.create') ? 'active' : '' }}" href="{{ route('posts.create') }}">Create Post</a></li>
             <li><a class="glossy-button glossy-button--red" href="{{ route('logout') }}">Logout</a></li>
-            <li class="username logged-in-as"><p>Logged in as <b>{{ Auth::user()->name }}</b></p></li>
+            <li class="glossy-button username">Logged in as <b>{{ Auth::user()->name }}</b></li>
             @else
             <li><a class="glossy-button glossy-button--green {{ request()->routeIs('register') ? 'active' : ''}}" href="{{ route('register') }}">Register</a></li>
             <li><a class="glossy-button glossy-button--green {{ request()->routeIs('login') ? 'active' : ''}}" href="{{ route('login') }}">Login</a></li>
             @endauth
         </ul>
 
-        <!-- @includeWhen($errors->any(), '_errors') -->
-
+    <div class="center-item">
         @if (session('success'))
-        <div class="flash-success">
+        <div class="glossy-button glossy-button--success">
             {{ session('success') }}
         </div>
         @endif
+    </div>
 
         <div class="main">
             @yield('content')

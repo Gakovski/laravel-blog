@@ -12,7 +12,7 @@
         <img src="/images/{{ $post->image }}" class="mask">
         <div class="h1">{{ $post->title }}</div>
         <p class="truncate">{{ $post->description }}</p>  
-        <div><a href="{{ route('posts.show', [$post]) }}" target="_" class="readmore glossy-button--green">Read More</a></div>
+        <div><a href="{{ route('posts.show', [$post]) }}" target="_" class="readmore glossy-button glossy-button--green">Read More</a></div>
         <p class="author">by {{ $post->user->name }}</p>
     </div>
 </div>
