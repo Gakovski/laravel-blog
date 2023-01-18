@@ -12,7 +12,7 @@
         <div class="inline-flex-parent">
             @can('update', $post)
             <div>
-                <button class="glossy-button glossy-button--gold" type="submit"><a href="{{ route('posts.edit', [$post]) }}">Edit post</a></button>
+                <a class="edit glossy-button glossy-button--gold" href="{{ route('posts.edit', [$post]) }}">Edit post</a>
             </div>
             @endcan
             @can('delete', $post)

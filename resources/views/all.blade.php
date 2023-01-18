@@ -1,10 +1,10 @@
 @extends('layout')
 
-@section('title', 'Home')
+@section('title', 'All Posts')
 
 @section('content')
 
-<div>
+<div class="grid-parent">
 @forelse($posts as $post)
 
 <div class="container">

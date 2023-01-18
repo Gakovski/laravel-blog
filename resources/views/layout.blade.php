@@ -11,7 +11,7 @@
     <script>document.body.style.visibility=`hidden`;</script>
         <ul class="nav">
             <li><a class="glossy-button glossy-button--blue {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a></li>
-            <li><a class="glossy-button glossy-button--blue {{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">About</a></li>
+            <li><a class="glossy-button glossy-button--blue {{ request()->routeIs('all') ? 'active' : '' }}" href="{{ route('all') }}">All Posts</a></li>
             @auth
             <li><a class="glossy-button glossy-button--blue {{ request()->routeIs('posts.create') ? 'active' : '' }}" href="{{ route('posts.create') }}">Create Post</a></li>
             <li><a class="glossy-button glossy-button--red" href="{{ route('logout') }}">Logout</a></li>

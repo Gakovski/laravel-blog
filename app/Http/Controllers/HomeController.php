@@ -9,12 +9,15 @@ class HomeController extends Controller
 {
     public function home() {
         
-        $posts = Post::all();
+        $posts = Post::latest()->take(3)->get();
 
         return view('home', ['posts' => $posts]);
     }
     
-    public function about() {
-        return view('about');
+    public function all() {
+
+        $posts = Post::all(); 
+
+        return view('all', ['posts' => $posts]);
     }
 }
